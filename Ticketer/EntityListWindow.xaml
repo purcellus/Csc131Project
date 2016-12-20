@@ -1,0 +1,36 @@
+﻿<Window x:Class="Ticketer.EntityListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="EntityListWindow" Height="400" Width="600">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Button x:Name="CreateEntityButton" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontWeight="ExtraBold" Width="80" Click="CreateEntityButton_Click">
+            <TextBlock>Make New<LineBreak/>Entity</TextBlock> 
+        </Button>
+
+        <Button x:Name="BackToTicketButton" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="center" FontWeight="ExtraBold" Width="80" Click="BackToTicketButton_Click">
+            <TextBlock>Back To<LineBreak/>Ticket</TextBlock>
+        </Button>
+        <Button x:Name="SelectEntityButton" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="center" FontWeight="ExtraBold" Width="80" Click="SelectEntityButton_Click">
+            <TextBlock>Select<LineBreak/>Entity</TextBlock>
+        </Button>
+        <ListView x:Name="EntityListView"    Grid.Column="1" Grid.RowSpan="3" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="150" Header="Entity Name" DisplayMemberBinding="{Binding EntityName}"/>
+                    <GridViewColumn Width="150" Header="Entity Owner" DisplayMemberBinding="{Binding EntityOwner.CustomerName}"/>
+                    <GridViewColumn Width="200" Header="Entity Description" DisplayMemberBinding="{Binding EntityDescription}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

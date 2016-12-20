@@ -1,0 +1,33 @@
+﻿<Window x:Class="Ticketer.TechListWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TechListWindow" Height="300" Width="750">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+        <ListView x:Name="TechListView"  Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Stretch"   VerticalAlignment="Stretch">
+            <ListView.View>
+                <GridView>
+                    
+                    <GridViewColumn Width="150" Header="Technician Name" DisplayMemberBinding="{Binding TechnicianName}"/>
+                    <GridViewColumn Width="150" Header="Technician Email" DisplayMemberBinding="{Binding TechnicianEmail}"/>
+                    <!--TODO add bindings for functionality-->
+
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button x:Name="SelectTechButton" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="100" Content="Select Tech" FontSize="16" Click="AddTechButton_Click">
+
+        </Button>
+
+        <Button x:Name="GoBacktoTicketButton" Grid.Column="0" Grid.Row="2" VerticalAlignment="Bottom" Height="30" Content="Go Back" FontSize="16" Click="GoBacktoTicketButton_OnClickButton_Click" Margin="0,0,1,0"/>
+    </Grid>
+</Window>

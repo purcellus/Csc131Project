@@ -1,0 +1,9 @@
+﻿<Application x:Class="Ticketer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="LoginWindow.xaml">
+            <!--change the startupuri to change the startup window, ex. LoginWindow.xaml-->
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>

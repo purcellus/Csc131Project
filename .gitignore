@@ -1,0 +1,10 @@
+Ticketer/bin/*
+Ticketer/obj/*
+*.suo
+Ticketer/*.suo
+Logic/bin/*
+Logic/obj/*
+Logic/*.suo
+/Ticketer/Intuition/bin/Debug
+/Ticketer/Intuition/obj/Debug
+/Ticketer/packages
